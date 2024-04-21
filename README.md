@@ -16,10 +16,31 @@
 ember install ember-debug-component
 ```
 
+## Configuration
+You can specify `ember-cli-build.js`:
+
+```js
+module.exports = function(defaults) {
+  var app = new EmberApp(defaults, {
+    'ember-debug-component': {
+      allow: ['development'], // for other ENVs <Debug>lalala</Debug> will be excluded from build
+    }
+  });
+```
+
 
 ## Usage
 
-[Longer description of how to use the addon in apps.]
+```hbs
+<div>
+  <Debug> hidden content </Debug>
+</div>
+```
+
+Use commands in the browser console to see hidden information.
+
+- `debugDevTools.show()`
+- `debugDevTools.hide()`
 
 
 ## Contributing
