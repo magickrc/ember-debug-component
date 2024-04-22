@@ -11,7 +11,7 @@ export default class DebugDevToolsService extends Service {
 
   setDebugValue(value) {
     this.debugValue = value;
-    localStorage.setItem('debug-component', value ? 'true' : '');
+    localStorage.setItem('show-debug-component', value ? 'true' : '');
   }
 
   get debugEnabled() {
