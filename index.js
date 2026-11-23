@@ -35,7 +35,7 @@ module.exports = {
     };
   },
 
-  _filterAssertHelper(tree) {
+  _filterDebugComponent(tree) {
     let app = this._findHost();
     let addonOptions = this._getOptions()[this.name];
 
@@ -55,14 +55,14 @@ module.exports = {
   treeForApp(tree) {
     return this._super.treeForApp.call(
       this,
-      this._filterAssertHelper(tree, 'app tree')
+      this._filterDebugComponent(tree, 'app tree')
     );
   },
 
   treeForAddon(tree) {
     return this._super.treeForAddon.call(
       this,
-      this._filterAssertHelper(tree, 'addon tree')
+      this._filterDebugComponent(tree, 'addon tree')
     );
   },
 };
